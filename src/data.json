@@ -1,0 +1,31 @@
+{
+    "destinations": [{
+             "name":"Berlin",
+             "id":1,
+ 
+             "hotels":[
+                 {"name":"Radisson Blue Berlin", "stars":"4", "price":"132"  },
+                 {"name":"Landmark Eco Hotel", "stars":"3", "price":"83" }
+             ]
+        },
+        {
+         "name":"Paris",
+         "id":2,
+ 
+         "hotels":[
+             {"name":"Hotel Geoffroy Marie Opéra", "stars":"3", "price":"203" },
+             {"name":"Hotel Saint Honore", "stars":"3", "price":"83" }
+         ]
+    },
+    {
+     "name":"Tehran",
+     "id":3,
+
+     "hotels":[
+         {"name":"Grand Hotel Tehran", "stars":"5", "price":"198" },
+         {"name":"Esteghlal", "stars":"5", "price":"150" }
+     ]
+}
+     
+     ]
+ }
