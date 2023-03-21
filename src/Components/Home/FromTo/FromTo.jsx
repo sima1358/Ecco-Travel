@@ -16,7 +16,7 @@ export default function FromTo() {
     if (new Date(selectedDate) >= new Date(dateFrom)) {
       setDateTo(selectedDate);
     } else {
-      alert("Date to cannot be earlier than date from.");
+      alert("Date to cannot be earlier than the departure date.");
     }
   };
 
