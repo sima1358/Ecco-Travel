@@ -26,18 +26,20 @@ export const createTour = async (req, res) => {
 /**
  *
  */
-export const getTour = async (req, res) => {
-      
+export const getListOfTours = async (req, res) => {
+      // for pagination
+      const page = parseInt(req.query.page);
+
     try {
-      const tour = await Tour.find();
+      const tours = await Tour.find({}).skip(page*10).limit(10);
   
       return res
         .status(StatusCodes.OK)
-        .json({ message: "Successfully find", tour });
+        .json({success: true, count: tours.length, message: "Successfully find", data:tours });
     } catch (error) {
       res
         .status(StatusCodes.BAD_REQUEST)
-        .json({ message: "Failed to find the tour; Try again" });
+        .json({ message: "Tours not found; Try again" });
     }
   };
 
@@ -57,18 +59,19 @@ export const updateTour = async (req, res) => {
 
   const id = req.params.id;
   try {
-    const updateTour = await Tour.findByIdAndUpdate(
+    const updatedTour = await Tour.findByIdAndUpdate(
       id,
       {
         $set: req.body,
         // is an update object specifying that the fields and values contained in the req.body object should be set or updated in the document. req.body refers to the data sent in the request body, usually in JSON format.
       },
       { new: true }
+    //   is an option passed to the findByIdAndUpdate() method, indicating that the updated document should be returned as a result of the operation. By default, the method would return the document as it was before the update.
     );
 
     return res
       .status(StatusCodes.OK)
-      .json({ message: "Successfully Updated", data: updateTour });
+      .json({ message: "Successfully Updated", data: updatedTour });
   } catch (error) {
     res
       .status(StatusCodes.EXPECTATION_FAILED)
@@ -83,13 +86,20 @@ export const updateTour = async (req, res) => {
  * @param {*} res
  */
 export const deleteTour = async (req, res) => {
-  try {
-  } catch (error) {
+    const id = req.params.id;
+    try {
+      const deletedTour = await Tour.findByIdAndDelete(id);
+
+        return res
+        .status(StatusCodes.OK)
+        .json({ message: "Successfully Deleted", data: deletedTour });
+    }   
+  catch (error) {
     res
       .status(StatusCodes.EXPECTATION_FAILED)
       .json({ message: "Delete failed" });
   }
-};
+ }
 
 // get single tour
 /**
@@ -98,25 +108,19 @@ export const deleteTour = async (req, res) => {
  * @param {*} res
  */
 export const getSingleTour = async (req, res) => {
-  try {
-  } catch (error) {
+    const id = req.params.id;
+    try {
+      const tour = await Tour.findById(id);
+
+        return res
+        .status(StatusCodes.OK)
+        .json({ message: "Successfully find", data: tour });
+    }   
+  catch (error) {
     res
       .status(StatusCodes.SERVICE_UNAVAILABLE)
       .json({ message: "it is not possible to get single tour" });
   }
 };
 
-// get combined tour
-/**
- *
- * @param {*} req
- * @param {*} res
- */
-export const getCombinedTour = async (req, res) => {
-  try {
-  } catch (error) {
-    res
-      .status(StatusCodes.NOT_FOUND)
-      .json({ message: "it is not possible to get combined tour" });
-  }
-};
+

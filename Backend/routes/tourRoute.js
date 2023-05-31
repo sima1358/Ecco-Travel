@@ -1,11 +1,10 @@
 import express from "express";
 import {
   createTour,
-  getTour,
+  getListOfTours,
   updateTour,
   deleteTour,
-  getSingleTour,
-  getCombinedTour,
+  getSingleTour
 } from "../controllers/tourController.js";
 
 const router = express.Router();
@@ -14,7 +13,7 @@ const router = express.Router();
 router.post("/createTour", createTour);
 
 // get tour
-router.get('/getTour', getTour)
+router.get('/getListOfTours', getListOfTours)
 
 // update tour
 router.put("/updateTour/:id", updateTour);
@@ -23,9 +22,8 @@ router.put("/updateTour/:id", updateTour);
 router.delete("/deleteTour/:id", deleteTour);
 
 // create single tour
-router.post("/getSingleTour/:id", getSingleTour);
+router.get("/getSingleTour/:id", getSingleTour);
 
-// create combination tour
-router.post("/getCombinedTour/:id", getCombinedTour);
+
 
 export default router;

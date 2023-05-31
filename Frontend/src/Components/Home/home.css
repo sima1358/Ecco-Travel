@@ -1,0 +1,180 @@
+.home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 200rem;
+  background: transparent;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+.homeContent {
+  width: 100%;
+  padding: 8rem 1.5rem;
+  display: flex;
+  row-gap: 3rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  z-index: 100;
+}
+
+.textDiv {
+  display: flex;
+  margin-left: 5rem;
+   padding: 2rem;
+  background-color: lightcyan;
+  opacity: 0.75;
+  border-radius: 25px;
+  width: 40%;
+}
+
+.smallText {
+  display: flex;
+  font-size: 2rem;
+  border-radius: 25px;
+  color: rgb(60, 103, 197);
+  justify-content: center;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.date-table {
+  display: flex;
+  justify-content: center;
+}
+.departure-date-class,
+.arrival-date-class {
+  padding-left: 2rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#departure-date,
+#arrival-date {
+  width: 10rem;
+  height: 2rem;
+  color: rgb(150, 36, 150);
+}
+
+.label-date {
+  margin-left: 2rem;
+  width: 80%;
+  color: rgb(139, 13, 139);
+}
+button {
+  border-radius: 20px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  padding: 1rem;
+  margin: 1rem auto;
+  justify-content: center;
+  align-items: center;
+}
+.cardDiv {
+  position: relative;
+  padding: 2rem 1rem;
+  background: rgb(39, 116, 151);
+  gap: 1rem;
+}
+
+label {
+  display: inline-block;
+  color: rgb(233, 210, 233);
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input {
+  background: gainsboro;
+  border: none;
+  width: 20%;
+  height: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  border-radius: 10px;
+}
+
+.icon {
+  font-size: 18px;
+  color: lightseagreen;
+  margin-left: 10px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-family: monospace;
+  font-style: italic;
+  padding: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+  .smallText {
+    font-size: 1.5rem;
+  }
+
+  .date-table {
+    display: inline-block;
+  }
+
+  label {
+    font-size: 18px;
+  }
+  button {
+    font-size: 15px;
+  }
+  p {
+    font-size: 17px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 600px) {
+  .smallText {
+    font-size: 1.2rem;
+  }
+  .textDiv {
+    margin-top: 10rem;
+    margin-left: 1rem;
+    padding: 1rem 0;
+    width: 90%;
+  }
+  button {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
