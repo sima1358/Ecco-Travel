@@ -1,14 +1,13 @@
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
-// import Main from "./Components/Main/Main";
-// import Footer from "./Components/Footer/Footer";
-
 import ContactUs from "./Components/Navbar/ContactUs/ContactUs";
 import SuggestedDestinations from "./Components/Navbar/SuggestedDestination/SuggestedDestinations";
 import Login from "./Components/Navbar/Login/Login";
 import { Routes, Route } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+ 
+ 
 function App() {
   return (
     <>
