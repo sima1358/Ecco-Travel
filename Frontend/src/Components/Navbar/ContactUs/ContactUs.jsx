@@ -67,6 +67,10 @@ export default function ContactUs() {
                   <button type="submit" onSubmit={handleSend}>
                     Send
                   </button>
+                  <div className="phoneAndAdd">
+                  <h5>Phone: +49 12345678</h5>
+                  <h5>Address: Lohrem Str., 12, Dusseldorf 40123</h5>
+                  </div>
                 </div>
                 {/* end of email box */}
                 {/* ====================== */}
