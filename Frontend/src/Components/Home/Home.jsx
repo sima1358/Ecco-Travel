@@ -1,8 +1,8 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import ocean from "../../Video/ocean.mp4";
 import "./home.css";
 import City from "./City/City";
-import data from "../../data.json";
+import data from "../../data";
 import Result from "../Result/Result";
 
 export default function Home() {
@@ -71,7 +71,7 @@ export default function Home() {
   return (
     <section className="home">
       <div className="overlay"></div>
-      <video src={ocean} muted autoPlay loop={'true'} type="ocean/mp4"></video>
+      <video src={ocean} muted autoPlay loop={"true"} type="ocean/mp4"></video>
 
       <div className="homeContent container">
         <div className="textDiv">
@@ -136,6 +136,7 @@ export default function Home() {
                     name="passengers"
                     value={passengers}
                     onChange={(e) => setPassengers(e.target.value)}
+                    className="input-passengers"
                   ></input>
                 </label>
               </div>
@@ -149,6 +150,7 @@ export default function Home() {
                   name="budget"
                   value={budget}
                   onChange={(e) => setBudget(e.target.value)}
+                  className="input-budget"
                 />
               </label>
             </div>
@@ -159,16 +161,10 @@ export default function Home() {
             </div>
 
             <Result hotels={hotels} />
-         
-        
-      
-      
-       </div>
+          </div>
+        </div>
       </div>
-</div>
-      <div>
-
-      </div>
+      <div></div>
     </section>
   );
 }

@@ -5,7 +5,6 @@
   justify-content: center;
   min-width: none;
   width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -13,8 +12,7 @@
 }
 
 .overlay {
-  width: 100%;
-  height: 200rem;
+
   background: transparent;
   top: 0;
   bottom: 0;
@@ -22,27 +20,13 @@
   mix-blend-mode: hard-light;
 }
 
-video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  object-fit: cover;
-}
 
 .homeContent {
   width: 100%;
-  padding: 8rem 1.5rem;
+   padding: 8rem 1.5rem;
   display: flex;
   row-gap: 3rem;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  z-index: 100;
+    z-index: 100;
 }
 
 .textDiv {
@@ -103,6 +87,7 @@ button {
   padding: 2rem 1rem;
   background: rgb(39, 116, 151);
   gap: 1rem;
+  text-align: left;
 }
 
 label {
@@ -124,6 +109,10 @@ input {
   border-radius: 10px;
 }
 
+.input-passengers,
+.input-budget{
+  width: 5rem;
+}
 .icon {
   font-size: 18px;
   color: lightseagreen;
@@ -138,7 +127,7 @@ p {
   font-style: italic;
   padding: 0.5rem;
 }
-
+ 
 @media (max-width: 1200px) {
   .smallText {
     font-size: 1.5rem;
