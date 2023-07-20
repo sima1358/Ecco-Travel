@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ocean from "../../Video/ocean.mp4";
 import "./home.css";
 import City from "./City/City";
-import data from "../../data";
+import data from "../../data.json";
 import Result from "../Result/Result";
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
 
   const searchDestination = () => {
     // destination
-    const destination = data.destinations.find(
+    const destination = data.find(
       (dest) => dest.name.toLowerCase() === destinationCity.toLowerCase()
     );
     if (destination == null) {

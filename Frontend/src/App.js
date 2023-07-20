@@ -5,16 +5,12 @@ import ContactUs from "./Components/Navbar/ContactUs/ContactUs";
 import SuggestedDestinations from "./Components/Navbar/SuggestedDestination/SuggestedDestinations";
 import Login from "./Components/Navbar/Login/Login";
 import { Routes, Route } from "react-router-dom";
-// import 'bootstrap/dist/css/bootstrap.min.css';
  
  
 function App() {
   return (
     <>
       <Navbar />
-
-      {/* <Main />
-      <Footer /> */}
 
       <div className="App">
         <Routes>

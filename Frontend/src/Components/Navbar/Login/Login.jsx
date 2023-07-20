@@ -48,6 +48,8 @@ export default function Login() {
           <button type="submit" onSubmit={handleLogin}>
             Login
           </button>
+          <p>You did not register before?</p>
+          <button className="reg-btn">Register</button>
         </div>
       </section>
     </form>
